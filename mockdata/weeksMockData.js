@@ -7,7 +7,7 @@ function generateMockData() {
   // const endDate = new Date(); // End date
   const endDate = moment();
   const interval = 1; // 1 day
-  const symbols = ["AAPL", "GOOGL","TSLA", "BTC/USD", "DOGE/USD"];
+  const symbols = ["AAPL", "GOOGL","TSLA", "BTC/USD", "DOGE/USD", "AMZN"];
   const crypto = {'BTC/USD' : 1, 'DOGE/USD' : 1};
   const accountnums = [1, 2];
   const data = [];

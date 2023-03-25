@@ -9,3 +9,5 @@ account,symbol,qty,avg_cost,buy_pwr
 2,AAPL,stock,86,24.4,2
 1,GOOGL,stock,42,0.6,1
 2,GOOGL,stock,44,50.7,2
+1,AMZN,stock,42,85,1
+2,AMZN,stock,44,90.7,2

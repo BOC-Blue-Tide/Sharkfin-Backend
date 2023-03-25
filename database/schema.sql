@@ -77,27 +77,9 @@ CREATE TABLE IF NOT EXISTS portfolioweeks (
 COPY portfolioweeks (account, symbol, type, time, qty, avg_cost, buy_pwr)
 FROM '/Users/hyoon/Workspace/rpp2207/BOC/Sharkfin-Backend/weeksMock.csv' DELIMITER ',' CSV HEADER;
 
--- SELECT create_hypertable(
---   'portfoliomins',
---   'time',
---   chunk_time_interval => INTERVAL '10 minutes'
--- );
-
--- SELECT create_hypertable(
---   'portfoliodays',
---   'time',
---   chunk_time_interval => INTERVAL '1 day'
--- );
-
--- SELECT create_hypertable(
---   'portfolioweeks',
---   'time',
---   chunk_time_interval => INTERVAL '7 days'
--- );
-
 CREATE INDEX idx_account_symbol_instant ON portfolioinstant (account, symbol);
-CREATE INDEX idx_account_symbol_time ON portfoliomins (account, symbol, time DESC);
-CREATE INDEX idx_account_symbol_time ON portfoliodays (account, symbol, time DESC);
-CREATE INDEX idx_account_symbol_time ON portfolioweeks (account, symbol, time DESC);
+CREATE INDEX idx_account_symbol_mins ON portfoliomins (account, symbol, time DESC);
+CREATE INDEX idx_account_symbol_days ON portfoliodays (account, symbol, time DESC);
+CREATE INDEX idx_account_symbol_weeks ON portfolioweeks (account, symbol, time DESC);
 
 \timing

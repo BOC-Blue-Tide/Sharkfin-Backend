@@ -3,7 +3,7 @@ const { Parser } = require("json2csv");
 const moment = require('moment');
 function generateMockData() {
   // const startDate = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000); // now - 7 days
-  const startDate = moment().subtract(31, 'days').format();
+  const startDate = moment().subtract(3, 'months').format();
   // const endDate = new Date(); // End date
   const endDate = moment();
   const interval = 1; // 1 day
