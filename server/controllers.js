@@ -96,7 +96,7 @@ module.exports = {
       await axios.get(alpacaCryptoMultiBarsURL, alpacaConfigs)
         .then((result) => {
           var weekendExcluded = portfolioHelper.excludeWeekend(result.data.bars);
-          console.log(weekendExcluded);
+          // console.log(weekendExcluded);
           historyData = {...historyData, ...weekendExcluded};
         })
         .catch((err) => {
@@ -105,6 +105,7 @@ module.exports = {
     };
     var cleanAlpacaData = portfolioHelper.cleanAlpacaData(timeWindow, historyData);
     var portfolioHistory;
+    console.log(timeObj.sqlTF);
     await pool.query(getQueries.getPortfolioHistory(accountNum, timeObj.sqlTF, timeWindow, todayDate))
       .then((result) => {
         portfolioHistory = result.rows;

@@ -2,7 +2,7 @@
 
 -- run \i ./database/schema.sql
 
-\c sharkfin1
+\c sharkfin
 CREATE EXTENSION IF NOT EXISTS timescaledb;
 
 SET TIME ZONE UTC;

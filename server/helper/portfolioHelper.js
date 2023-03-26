@@ -38,19 +38,19 @@ module.exports = {
       startTime = startTime.subtract(7, 'days').format().slice(0,10);
       timeFrame = '1Day';
       sqlTF = '7.9 days';
-    } else if (timeWindow = '1M') {
+    } else if (timeWindow === '1M') {
       startTime = startTime.subtract(1, 'months').format().slice(0,10);
       timeFrame = '1Day';
       sqlTF = '1 month';
-    } else if (timeWindow = '3M') {
+    } else if (timeWindow === '3M') {
       startTime = startTime.subtract(3, 'months').format().slice(0,10);
       timeFrame = '1Day';
       sqlTF = '3 months';
-    } else if (timeWindow = '1Y') {
+    } else if (timeWindow === '1Y') {
       startTime = startTime.subtract(1, 'years').format().slice(0,10);
       timeFrame = '1Day';
       sqlTF = '1 year';
-    } else if (timeWindow = '5Y') {
+    } else if (timeWindow === '5Y') {
       startTime = startTime.subtract(5, 'years').format().slice(0,10);
       timeFrame = '1Week';
       sqlTF = '5 years';
